@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Main Page</title>
+</head>
+<body ng-app="attendanceManagment">
+	<hr />
+	<div class="container" ng-controller="UserController">
+
+
+
+		<div class="row">
+			<b>Select Lead</b> <select ng-model="leadNames" id="orderstatus"
+				ng-change="Onchange()" class="form-control">
+				<option value="">-- Select Lead--</option>
+				<option ng-repeat="lead in leadnames " value="{{lead}}">{{lead}}</option>
+
+			</select>
+
+		</div>
+
+		<div class="row">
+			<table>
+				<thead>
+					<tr>
+						<th>Employee Name</th>
+						<th>Role</th>
+						<th>Technology</th>
+						<th>Location</th>
+						<th>Work from Homes</th>
+						<th>Leaves</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th>yyyy-mm-dd</th>
+						<th>yyyy-mm-dd</th>
+					</tr>
+
+					<tr ng-repeat="emp in employeeList">
+						<td>{{emp.empName}}</td>
+						<td>{{emp.role}}</td>
+						<td>{{emp.technology}}</td>
+						<td>{{emp.location}}</td>
+
+						<td><input type="text"
+							ng-model="emp.leavesInformations.workFromHomes"
+							class="inputbox form-control" />
+						<td><input ng-model="emp.leavesInformations.leaves"
+							type="text" class="inputbox form-control" /></td>
+					</tr>
+
+
+
+				</tbody>
+			</table>
+			<button type="button" ng-click="saveAllValues()">Save</button>
+
+		</div>
+		<br> <a href="http://localhost:8080/download/attendance.xlsx">Generate
+			Excel </a>
+	</div>
+</body>
+
+
+<script src="js/lib/angular.min.js"></script>
+<script src="js/lib/ui-bootstrap-tpls-2.5.0.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/UserController.js"></script>
+<script src="js/UserService.js"></script>
+<link rel="stylesheet" href="css/lib/bootstrap.min.css" />
+<link rel="stylesheet" href="css/app.css" />
+</html>
