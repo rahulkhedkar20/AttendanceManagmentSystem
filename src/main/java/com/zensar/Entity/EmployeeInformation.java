@@ -19,7 +19,7 @@ public class EmployeeInformation {
 	private String leadName;
 
 	@JoinColumn(name = "leave_leaveID")
-	@OneToOne( cascade = CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.ALL)
 	private LeavesInformation leavesInformations;
 
 	public int getEmpId() {

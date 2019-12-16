@@ -8,20 +8,20 @@ import com.zensar.Entity.LeavesInformation;
 import com.zensar.repository.EmployeeRepository;
 
 @Service
-public class EmployeeserviceImpl  implements EmployeeService{
+public class EmployeeserviceImpl implements EmployeeService {
 	@Autowired
 	private EmployeeRepository employeeRepository;
 
 	@Override
 	public EmployeeInformation SaveEmployee(EmployeeInformation employeeInformation) {
 		// TODO Auto-generated method stub
-		
-		EmployeeInformation emp= employeeInformation;
-		
-		LeavesInformation l1=employeeInformation.getLeavesInformations();
+
+		EmployeeInformation emp = employeeInformation;
+
+		LeavesInformation l1 = employeeInformation.getLeavesInformations();
 		emp.setLeavesInformations(l1);
-		
-	return	employeeRepository.save(emp);
+
+		return employeeRepository.save(emp);
 	}
 
 }

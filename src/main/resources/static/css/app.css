@@ -1,13 +1,15 @@
+body {
+	background-color: #efefef;
+}
 
-body{
-    background-color: #efefef;
+span.spacing {
+	margin-right: 10px;
 }
-span.spacing{
-    margin-right: 10px;
+
+input.custom-width {
+	width: 200px;
 }
-input.custom-width{
-    width: 200px;
-}
-input.spacing{
-    margin-right: 5px;
+
+input.spacing {
+	margin-right: 5px;
 }

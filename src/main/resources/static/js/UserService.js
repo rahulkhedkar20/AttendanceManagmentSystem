@@ -8,8 +8,8 @@ angular.module('attendanceManagment.services', []).factory('UserService',
 				var url = CONSTANTS.getAllEmployeeByLeadNames + leadname;
 				return $http.get(url);
 			}
-			service.getleadNames=function(){
-				var url=CONSTANTS.getleadNames;
+			service.getleadNames = function() {
+				var url = CONSTANTS.getleadNames;
 				return $http.get(url);
 			}
 			service.updateEmployee = function(employeelist) {
